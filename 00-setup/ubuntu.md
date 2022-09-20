@@ -8,3 +8,9 @@ https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setu
 
 
 
+## Add env
+```
+source /opt/ros/humble/setup.sh
+or
+echo "source /opt/ros/humble/setup.sh" >> ~/.bashrc
+```

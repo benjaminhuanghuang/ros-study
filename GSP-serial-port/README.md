@@ -2,7 +2,7 @@ We use a GSP module with serial port, but the computer does not have serial port
 
 
 To access serial port through USB port, we have to install an extension for VirtualBox
-
+https://www.techrepublic.com/article/how-to-enable-usb-in-virtualbox/
 
 ![](./usb.png)
 

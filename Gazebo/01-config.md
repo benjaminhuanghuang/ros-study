@@ -4,7 +4,7 @@
 vi ~/.bashrc
 
 
-# use CPU render gazebo if using VM
+# turn off GPU in VM
 export SVGA_VGPU10=0
 ```
 

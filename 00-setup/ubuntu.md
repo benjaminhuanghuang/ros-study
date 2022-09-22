@@ -7,6 +7,10 @@ https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setu
 
 
 
+## check the packages
+```
+
+```
 
 ## Add env
 ```

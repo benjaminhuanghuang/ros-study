@@ -96,7 +96,7 @@ if(BUILD_TESTING)
 
 ## Launch robot
 ```
-ros2 launch basic_mobile_robot basic_mobile_bot_v1.launch.py
+ros2 launch ben_robot ben_robot.launch.py
 
 # see the available arguments you can pass to the launch file
 ros2 launch -s basic_mobile_robot basic_mobile_bot_v1.launch.py

@@ -11,8 +11,8 @@ Run
 gazebo
 ```
 
-查看Gazebo版本。
+Check Gazebo version
 
 ```
-    dpkg -l | grep gazebo
+dpkg -l | grep gazebo
 ```

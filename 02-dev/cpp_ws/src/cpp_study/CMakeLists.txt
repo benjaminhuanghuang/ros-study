@@ -17,6 +17,12 @@ install(TARGETS
     DESTINATION lib/${PROJECT_NAME}
 )
 
+add_executable(oop_node src/oopNode.cpp)
+ament_target_dependencies(oop_node rclcpp)
+install(TARGETS
+  oop_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

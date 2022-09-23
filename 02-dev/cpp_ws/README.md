@@ -1,7 +1,11 @@
+
 ## Install
 ```
+    sudo apt-get -y install ament-cmake
+
     sudo apt instal python3-colcon-common-extensions
 ```
+
 
 ## source ROS2 environment
 ```
@@ -15,20 +19,30 @@ source /opt/ros/humble/setup.bash
 ```
 ## Create packages under <workspace>/src
 ```
-    ros2 pkg create <name> --build-type ament_python --dependencies rclpy
+    ros2 pkg create <name> --dependencies rclcpp
 ```
+defautl build-type is ament_cmake 
 
 ## Create node 
-
-## Modify setup.py
 ```
-    entry_points={
-        'console_scripts': [
-            "my_node = <pkg>.<node>:main"
-        ],
-    },
-```
+    cd package/src
 
+    touch node.cpp
+```
+## Modify CMakeLists.txt
+```
+    add_executable(my_node src/wang2.cpp)
+    ament_target_dependencies(my_node rclcpp)
+
+    install(TARGETS
+        my_node
+        DESTINATION lib/${PROJECT_NAME}
+    )
+```
+install path
+```
+install/<pkg>/lib/<pkg>
+```
 ## Resolve dependencies
 
 From root of workspace, run the command
@@ -49,6 +63,4 @@ From the root of workspace, run the command
     ros2 run <pkg> <node>
 
     ros2 node list
-
-    ros2 node info /<node>
 ```

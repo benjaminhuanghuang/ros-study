@@ -31,7 +31,7 @@ defautl build-type is ament_cmake
 ```
 ## Modify CMakeLists.txt
 ```
-    add_executable(my_node src/wang2.cpp)
+    add_executable(my_node src/node.cpp)
     ament_target_dependencies(my_node rclcpp)
 
     install(TARGETS
@@ -63,4 +63,6 @@ From the root of workspace, run the command
     ros2 run <pkg> <node>
 
     ros2 node list
+
+    ros2 node info /my_code
 ```

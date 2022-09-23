@@ -51,4 +51,7 @@ From the root of workspace, run the command
     ros2 node list
 
     ros2 node info /<node>
+
+
+    ros2 topic pub /topic std_msgs/msg/UInt32 "{data: 10}" 
 ```

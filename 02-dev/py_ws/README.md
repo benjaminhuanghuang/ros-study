@@ -1,29 +1,48 @@
 
-1. source ROS2 environment
+## source ROS2 environment
 ```
 source /opt/ros/humble/setup.bash
 ```
 
-2. create directory
+## create directory for workspace
 ```
     mkdir -p ~/<workspace>/src
     cd ~/<workspace>/src
 ```
-
-3. Create packages under <workspace>/src
+## Create packages under <workspace>/src
 ```
     ros2 pkg create <name> --build-type ament_python --dependencies rclpy
 ```
 
-4. Resolve dependencies
+## Create node 
 
-    From root of workspace, run the command
+## Modify setup.py
+```
+    entry_points={
+        'console_scripts': [
+            "my_node = <pkg>.<node>:main"
+        ],
+    },
+```
+
+## Resolve dependencies
+
+From root of workspace, run the command
 ```
     rosdep install -i --from-path src --rosdistro humble -y
 ```
 
-5. Build the workspace with colcon
-    From the root of workspace, run the command
+## Build the workspace with colcon
+
+From the root of workspace, run the command
 ```
     colcon build
+```
+## Run node
+```
+    . install/setup.sh
+    
+    ros2 run <pkg> <node>
+
+    ros2 node list
 ```

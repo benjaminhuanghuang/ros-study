@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talk = py_study.talk:main'
+            'talk = py_study.talk:main',
+            'ooptalk = py_study.ooptalk:main'
         ],
     },
 )

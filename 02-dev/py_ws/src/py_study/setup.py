@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'talk = py_study.talk:main',
-            'ooptalk = py_study.ooptalk:main'
+            'ooptalk = py_study.ooptalk:main',
+            'publisher_node = py_study.publisher:main'
         ],
     },
 )

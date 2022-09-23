@@ -24,7 +24,7 @@ cd basic_mobile_bot_description
 touch model.config
 ```
 
-Add the Path of the Model to the Bashrc File
+! Add the Path of the Model to the Bashrc File
 ```
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/ben/workspace/odometry_ws/src/basic_mobile_robot/models/
 ```

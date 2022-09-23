@@ -34,7 +34,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 ## Show message detail
 ```
+ros2 interface package <package>
+
 ros2 interface show std_msgs/msg/String
 
-ros2 interface show my_interface/msg/Novel2
+ros2 interface proto my_interface/msg/Novel2
 ```

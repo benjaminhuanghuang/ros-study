@@ -9,7 +9,7 @@ https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setu
 
 ## check the packages
 ```
-
+sudo apt list | grep steering | grep humble
 ```
 
 ## Add env

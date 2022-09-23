@@ -12,6 +12,11 @@ Install the Turtlebot 3 packages:
 sudo apt install ros-humble-turtlebot3*
 ```
 
+The install path is
+```
+/opt/ros/humble/share/nav2_bringup/launch/tb3_simulation_launch.py
+```
+
 
 Set key environment variables
 ```

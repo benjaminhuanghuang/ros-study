@@ -1,5 +1,7 @@
 A parameter is a configuration value of node or node setting
 
+参数是由服务构建出来了
+
 
 ROS2 support parameter:
 

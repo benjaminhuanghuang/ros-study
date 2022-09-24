@@ -7,7 +7,9 @@
 ## Create msg
 ```
     cd <node>
-    touch <name>.msg
+    mkdir srv
+    cd srv
+    touch <name>.srv
 ```
 
 
@@ -18,8 +20,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Novel.msg"
-   DEPENDENCIES sensor_msgs
+   "srv/BorrowMoney.srv"
  )
 ```
 
@@ -34,9 +35,26 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 ## Show message detail
 ```
-ros2 interface package <package>
+ros2 interface package my_interface
 
-ros2 interface show std_msgs/msg/String
+ros2 interface show my_interface/srv/BorrowMoney
 
 ros2 interface proto my_interface/msg/Novel2
+
+
+ros2 interface show my_interface/srv/SellNovel
+
+ros2 interface proto my_interface/srv/SellNovel 
+```
+
+
+## Create service code
+### Add dependency
+```
+<depend>my_interfaces</depend>
+```
+
+### Import service defination 
+```
+from my_interfaces.srv import BorrowMoney
 ```

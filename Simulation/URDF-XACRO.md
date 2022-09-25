@@ -2,9 +2,13 @@
 
 A URDF (Universal Robot Description Format) file is an XML file that describes what a robot should look like in real life
 
+URDF使用XML格式描述机器人文件
+
 URDF是ROS的原生支持格式
 
 Rviz可视化只能使用URDF，
+
+URDF由两种关键组件共同组成
 
 The body of a robot consists of two components:
 - Links are connected to each other by joints.

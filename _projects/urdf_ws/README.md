@@ -25,7 +25,7 @@ or use launch file
   ros2 launch urdf_viz rsp.launch.py
 ```
 
-Open joint_state_publisher_gui to operat the robot
+Open joint_state_publisher_gui to operate the robot
 ```
   ros2 run joint_state_publisher_gui joint_state_publisher_gui
 ```

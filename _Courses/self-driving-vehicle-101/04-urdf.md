@@ -25,5 +25,10 @@ install(
 ```
 
 ## Run
+publish the robot description 
+```
+
+```
+or use launch file
 ```
 ```

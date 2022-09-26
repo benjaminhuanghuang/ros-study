@@ -23,7 +23,31 @@ Install:
     - gazebo_ros_diff_drive 通过ROS2控制和获取两轮驱动机器人的接口
 
 
-# run gazebo without ros
+## run gazebo without ROS
 ```
     gazebo /usr/share/gazebo-11/worlds/seesaw.world
 ```
+
+## work with ROS
+gazebo use sdf file
+urdf use decribes the a robot, sdf describe the world taht is being simulated.
+gazebo has a spawn script that can read the description from the topic and simulate the robot.
+
+gazebo use plugins communicate with ROS, for example, 
+joint state publisher plugin can publish joint state topic
+joint contrtoller plugin can get information from the rest of ROS and force the joints to move in certain ways
+sensor plugin can publish topics
+
+
+Run gazebo with ROS integrations
+```
+    ros2 launch gazebo_ros gazebo.lanucn.py
+```
+
+Spawn a robot
+```
+    ros2 ros2 launch gazebo_ros spawn_entity.py -topic robot_description --entity my_robot
+```
+
+We can put them into a launch file.
+

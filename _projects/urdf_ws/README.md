@@ -6,3 +6,14 @@ https://www.youtube.com/watch?v=CwdbsvcpOHM&list=PLunhqkrRNRhYYCaSTVP-qJnyUPkTxJ
 
 https://articulatedrobotics.xyz/ready-for-ros-7-urdf/
 
+Getting Ready for ROS Part 8: Simulating with Gazebo
+https://articulatedrobotics.xyz/ready-for-ros-8-gazebo/
+
+
+## run
+```
+    ros2 launch rsp.launch.py
+
+
+    ros2 run joint_state_publisher_gui joint_state_publisher_gui
+```

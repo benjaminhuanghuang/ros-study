@@ -11,12 +11,18 @@ gazebo是独立于ROS/ROS2之外的仿真软件，可以独立Gazebo。如果要
 sudo apt install ros-humble-gazebo-ros
 
 sudo apt install ros-humble-gazebo-*
+
+or
+sudo apt install ros-humble-gazebo-pkgs
 ```
 
 
 ## Run
 ```
 gazebo
+
+# run with sample world file
+gazebo /usr/share/gazebo-11/worlds/seesaw.world
 
 or
 

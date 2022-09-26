@@ -36,8 +36,10 @@ Visualize the state of robot
 ```
   rviz2
 ```
-Add "TF"
+Set "fixed frame" to world
 
-Add "RobotModel", set "Description Topic" to /robot_description
+Add "TF", check "Show Names"
+
+Add "RobotModel", set "Description Topic" to /robot_description, and alpha set to 0.8
 
 ## Simulate

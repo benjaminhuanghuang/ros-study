@@ -1,6 +1,9 @@
 
 
 ## Reference
+
+https://github.com/joshnewans/urdf_example
+
 Getting Ready for ROS Part 7: Describing a robot with URDF
 https://www.youtube.com/watch?v=CwdbsvcpOHM&list=PLunhqkrRNRhYYCaSTVP-qJnyUPkTxJnBt&index=7
 

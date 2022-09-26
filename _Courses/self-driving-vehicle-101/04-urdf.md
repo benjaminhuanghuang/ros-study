@@ -1,17 +1,29 @@
 # URDF (Unified Robot Description format)
 
-Create package
+1. Create package
 ```
     ros2 pkg create box
 ```
 
 
-Create urdf
+2. Create urdf
 
 
-Create launch
+3. Create launch
+
+How to Load a URDF File into Gazebo – ROS 2
+https://automaticaddison.com/how-to-load-a-urdf-file-into-gazebo-ros-2/
 
 
-Modify CMakeLists.txt
+
+4. Modify CMakeLists.txt
+```
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+```
+
+## Run
 ```
 ```

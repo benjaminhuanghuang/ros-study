@@ -13,10 +13,31 @@ Getting Ready for ROS Part 8: Simulating with Gazebo
 https://articulatedrobotics.xyz/ready-for-ros-8-gazebo/
 
 
-## run
+## Visulization
+
+publish the robot description 
 ```
-    ros2 launch rsp.launch.py
+  ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_descdription:="$( xacro ~/my_robot.urdf.xacro )"
+```
+
+or use launch file
+```
+  ros2 launch urdf_viz rsp.launch.py
+```
+
+Open joint_state_publisher_gui to operat the robot
+```
+  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+```
+Change the value of the joints
 
 
-    ros2 run joint_state_publisher_gui joint_state_publisher_gui
+Visualize the state of robot
 ```
+  rviz2
+```
+Add "TF"
+
+Add "RobotModel", set "Description Topic" to /robot_description
+
+## Simulate

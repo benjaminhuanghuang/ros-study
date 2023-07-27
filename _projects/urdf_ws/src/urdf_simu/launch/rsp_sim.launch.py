@@ -1,8 +1,10 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import Command, LaunchConfiguration, PythonExpression
+
 
 
 from launch_ros.actions import Node
@@ -30,11 +32,20 @@ def generate_launch_description():
         'use_sim_time': True}] # add other parameters here if required
     )
 
+    world_file_name = 'test_world.world'
+    world_path = os.path.join(get_package_share_directory(pkg_name), 'worlds', world_file_name)
+
+    world = LaunchConfiguration('world')
+    declare_world_cmd = DeclareLaunchArgument(
+        name='world',
+        default_value=world_path,
+        description='Full path to the world model file to load')
 
 
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
+            PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
+            launch_arguments={'world': world_path}.items()
         )
 
 
@@ -45,6 +56,7 @@ def generate_launch_description():
 
     # Run the node
     return LaunchDescription([
+        declare_world_cmd,
         gazebo,
         node_robot_state_publisher,
         spawn_entity

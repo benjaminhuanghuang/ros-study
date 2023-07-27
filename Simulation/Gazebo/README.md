@@ -9,6 +9,11 @@ Gazebo 是一个独立的应用程序，可以独立于 ROS 或 ROS 2 使用。
 
 Gazebo与ROS 版本的集成是通过一组叫做gazebo_ros_pkgs的包 完成的，gazebo_ros_pkgs将Gazebo和ROS2连接起来。
 
+Install:
+```
+    sudo apt install ros-<distro>-gazebo-ros-pkgs
+```
+
 ## gazebo_ros_pkgs
 - gazebo_dev：开发Gazebo插件可以用的API
 - gazebo_msgs：定义的ROS2和Gazebo之间的接口（Topic/Service/Action）
@@ -17,4 +22,32 @@ Gazebo与ROS 版本的集成是通过一组叫做gazebo_ros_pkgs的包 完成的
     - gazebo_ros_camera 发布ROS2图像
     - gazebo_ros_diff_drive 通过ROS2控制和获取两轮驱动机器人的接口
 
+
+## run gazebo without ROS
+```
+    gazebo /usr/share/gazebo-11/worlds/seesaw.world
+```
+
+## work with ROS
+gazebo use sdf file
+urdf use decribes the a robot, sdf describe the world taht is being simulated.
+gazebo has a spawn script that can read the description from the topic and simulate the robot.
+
+gazebo use plugins communicate with ROS, for example, 
+joint state publisher plugin can publish joint state topic
+joint contrtoller plugin can get information from the rest of ROS and force the joints to move in certain ways
+sensor plugin can publish topics
+
+
+Run gazebo with ROS integrations
+```
+    ros2 launch gazebo_ros gazebo.lanucn.py
+```
+
+Spawn a robot
+```
+    ros2 ros2 launch gazebo_ros spawn_entity.py -topic robot_description --entity my_robot
+```
+
+We can put them into a launch file.
 
